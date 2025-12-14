@@ -1,0 +1,50 @@
+/* Basic styles for the project */
+:root{
+  --bg:#f7f8fb;
+  --text:#111827;
+  --muted:#374151;
+  --accent:#2563eb;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:2rem;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+main{width:100%;max-width:900px;margin:0 auto}
+article{
+  background:var(--card);
+  padding:clamp(1rem,2.5vw,2rem);
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(16,24,40,0.06);
+  line-height:1.65;
+  font-size:clamp(1rem,1.2vw + 0.6rem,1.125rem);
+  color:var(--muted);
+  overflow-wrap:break-word;
+  hyphens:auto;
+}
+h1{color:var(--accent);margin:0 0 .5rem;font-size:clamp(1.4rem,2.4vw,2rem)}
+p{margin:0 0 1rem;color:var(--muted);}
+
+/* Responsive tweaks */
+@media (max-width:520px){
+  body{padding:1rem}
+  article{padding:1rem}
+  h1{font-size:1.25rem}
+}
+
+/* Simple header/nav styling */
+header{width:100%;max-width:900px;margin-bottom:1rem}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 0.25rem}
+.nav-list{list-style:none;padding:0;margin:0;display:flex;gap:1rem}
+.nav-list a{color:var(--muted);text-decoration:none}
+.logo{font-weight:600;color:var(--text);text-decoration:none}
+
